@@ -33,7 +33,7 @@ aspects of programmer maturity valued by industry.
        - use of capitalization and whitespace (e.g. `char *word_end(char *p)` 
          rather than `char* wordEnd (char* p)`)
     - algorithms and data structures
-    - repository content (All necessary files are included.  No
+    - repository content (all necessary files are included and no
       unnecessary files.)
     - repository log messages (we encourage you to examine ours)
 - Correctness
@@ -79,7 +79,7 @@ my fancy interface thing
 
 ## Working with Strings
 Inside this repository there are two header files, **tokenizer.h** and **history.h**, 
-that declare the functions your project will define. You should explore the
+which declare functions your project will define. You should explore the
 contents of each file so that you are familiar with the instructions to
 follow.
 
