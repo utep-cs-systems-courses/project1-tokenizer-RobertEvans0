@@ -2,24 +2,40 @@ Lab Project 1: Building a Tokenizer
 ===================================
 All work should be your own work. Please see the [Course Website](https://sites.google.com/site/arch1utep/home#TOC-Academic-Honesty) for full details on the course's policy on academic honesty.
 
-The following should be pushed to your private Github repository prior to the deadline.:
+Prototype source code for this project is in a  directory named `src`.
+You should add and modify source code within that directory, and those
+changes should be pushed to your private Github repository prior to
+the deadline.:  
 - All .c and .h source files
-- A Makefile to build and clean your project
-- A brief README explaining how to use your program
+- A Makefile whose default production builds the project, and whose
+`clean` production eliminates any files created when the project is
+built.
+- A brief README documenting any non-obvious aspects of your program.  For example, you may want to describe how it works, how to run it, and any bugs or idiosyncracies the user ought to know about.
 
-_Your repository should be clean and not cluttered with any temporary scratch files (e.g. hello.c~ or #hello.c#)._
+_Your repository should be clean and not cluttered with backup or
+checkpoint files (e.g. hello.c~ or #hello.c#),  object files
+(e.g. tokenizer.o), or executable programs._
 
-You will be evaluated based on the following criteria:
+You will be evaluated based on the following criteria reflecting
+aspects of programmer maturity valued by industry.
 
-- Tools (efficiently utilize bash, emacs, make, the compiler, and git)
-- Written Communication (appropriate documentation)
-- Mature Programming 
-  - proper code hygiene (i.e expressive variable, function, and struct names)
-  - appropriate algorithms
-  - modularization
-  - header files
-- Variable Allocation (appropriate use of variables, scope, allocation)
-- Completion
+- Proper use of development tools (e.g. bash, emacs, make, compiler,
+  and git) 
+- Clear and concise written communication 
+- Code Hygene: consistent, expressive, and efficient
+    - variable, function, and struct names
+    - comments
+    - modularization (into fuctions and files) includig header files
+    - storage management (variable scope & lifetime, allocation and
+      freeing of dynamically allocated memory)
+    - consistent and language-appropriate coding style
+       - indentation
+       - use of capitalization and whitespace (e.g. `char *word_end(char *p)` 
+         rather than `char* wordEnd (char* p)`)
+    - algorithms and data structures
+    - no extraneous files in repository
+- Correctness
+- Timely completion
 
 You may refer to the [Grading and Course Learning Outcomes webpage](https://sites.google.com/site/arch1utep/course-learning-outcomes) for an in depth explanation of the grading criteria.
 
@@ -29,13 +45,6 @@ maintains a history. Tokenizing is the process of dividing a string into
 tokens by some delimeter (e.g. the string librarys split() function).
 Consider tokenizing the string “The cake is a lie!” using the space
 character. This would result in: \[“The”, “cake”, “is”, “a”, “lie!”\].
-
-When designing your functions, it is important to consider situations
-where a string is not constructed ideally. In other words, what would
-happen if your tokenizer encountered a string which contained multiple
-delimeters between each token? For example, using a space as a delimeter
-and accepting the following string as input, “&nbsp;&nbsp;&nbsp;Oh&nbsp;&nbsp;hi&nbsp;&nbsp;&nbsp;there”, would result
-in \[“Oh”, “hi”, “there”\].
 
 Lastly, your tokenizer should maintain a history. A good example of this
 is the bash command, **history**; or, something similar to below:
