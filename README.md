@@ -82,9 +82,9 @@ functions declared and described (but not defined) in tokenizer.h:
 5.  `int count_words(char *s); // the number of words in s`
 
 The declarations of these functions in `tokenizer.h` includes a more
-comprehensive description of each function's semantics.  ** We strongly
+comprehensive description of each function's semantics.  **We strongly
 encourage you to read these descriptions carefully, and to include
-them with your function declarations. **
+them with your function declarations.**
 
 You should carefully read the declarations of these functions in `Tokenizer.h` t
  also includes a more comprehensive description of each function's semantics.  
