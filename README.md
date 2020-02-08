@@ -82,8 +82,7 @@ functions declared and described (but not defined) in tokenizer.h:
 5.  `int count_words(char *s); // the number of words in s`
 
 Each function definition should appropriately use the arguments and
-return the correct type declared in the method signature. **You should
-not modify these method signatures.** Inside the header file you will
+return the correct type declared in the method signature. **Your code should include `tokenizer.h` and not modify the the declarations it contains.** Inside the header file you will
 find helpful comments explaining the purpose of each function. 
 
 Lastly, you are **not allowed to use any libraries except stdio.h and stdlib.h**
