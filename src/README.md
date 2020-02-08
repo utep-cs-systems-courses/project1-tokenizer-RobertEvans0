@@ -4,7 +4,8 @@ Project 1: Tokenizer
 
 You should document your tokenizer in this file.
 
-This file is written in the `markdown` text formatting language.   
+This file is written in the refreshingly simple `markdown` text
+formatting language.
 
 To learn about text formatting using markdown, we encourage you to examine 
  - [../README.md](../README.md)
