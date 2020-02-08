@@ -73,13 +73,13 @@ contents of each file so that you are familiar with the instructions to
 follow.
 
 The second milestone of your project is to define several of the
-functions contained in the tokenizer.h file:
+functions declared and described (but not defined) in file tokenizer.h:
 
-1.  `int string_length(char*);`
-2.  `char is_valid_character(char c);`
-3.  `int find_word_start(char*);`
-4.  `int find_word_end(char*);`
-5.  `int count_words(char*);`
+1.  `int space_char(char c); // true if c is a tab or space, and not zero`
+2.  `int non_space_char(char c); // true if c not a tab or space, and not zero`
+3.  `char *word_start(char *s); // * to first char in first word word`
+4.  `char *word_end(char *s);   // * to last char in word`
+5.  `int count_words(char *s); // the number of words in s`
 
 Each function definition should appropriately use the arguments and
 return the correct type declared in the method signature. **You should
@@ -104,7 +104,7 @@ of strings (char\*\*).
 Now that you have all the pieces for the tokenizer defined, the last
 part is to put them together and define the tokenizer:
 
-1.  `char** tokenize(char*);`
+1.  `char **tokenize(char *s);`
 
 As explained in the Overview, the tokenize method should accept a string
 of characters as input and return an array of tokens. It is important to
