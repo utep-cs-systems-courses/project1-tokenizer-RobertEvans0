@@ -12,10 +12,6 @@ the deadline.:
 built.
 - A brief README documenting any non-obvious aspects of your program.  For example, you may want to describe how it works, how to run it, and any bugs or idiosyncracies the user ought to know about.
 
-_Your repository should be clean and not cluttered with backup or
-checkpoint files (e.g. hello.c~ or #hello.c#),  object files
-(e.g. tokenizer.o), or executable programs._
-
 You will be evaluated based on the following criteria reflecting
 aspects of programmer maturity valued by industry.
 
@@ -33,8 +29,8 @@ aspects of programmer maturity valued by industry.
        - use of capitalization and whitespace (e.g. `char *word_end(char *p)` 
          rather than `char* wordEnd (char* p)`)
     - algorithms and data structures
-    - repository content (all necessary files are included and no
-      unnecessary files.)
+    - repository content (all necessary files are included, no
+      unnecessary files such as `#tokenizer.h#` and `tokenizer.o`)
     - repository log messages (we encourage you to examine ours)
 - Correctness
 - Timely completion
