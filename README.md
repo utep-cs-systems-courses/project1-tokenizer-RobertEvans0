@@ -35,7 +35,7 @@ aspects of programmer maturity valued by industry.
     - algorithms and data structures
     - repository content (all necessary files are included.  No
       unnecessary files.
-    - repository log messages (we encoruage you to examine ours)
+    - repository log messages (we encourage you to examine ours)
 - Correctness
 - Timely completion
 
