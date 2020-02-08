@@ -90,7 +90,7 @@ You should carefully read the declarations of these functions in `Tokenizer.h` t
  also includes a more comprehensive description of each function's semantics.  
 
 Each function definition should appropriately use the arguments and
-return the correct type declared in the method signature. **Your code should include `tokenizer.h` and not modify the the declarations it contains.** 
+return the correct type declared in the method declaration. **Your code should include `tokenizer.h` and not modify the the declarations it contains.** 
 
 Lastly, you are **not allowed to use any libraries except stdio.h and stdlib.h**
 in your source code.
@@ -111,7 +111,7 @@ of strings (char\*\*).
 Now that you have all the pieces for the tokenizer defined, the last
 part is to put them together and define the tokenizer:
 
-1.  `char **tokenize(char *s);`
+`char **tokenize(char *s);`
 
 As explained in the Overview, the tokenize method should accept a string
 of characters as input and return an array of tokens. It is important to
