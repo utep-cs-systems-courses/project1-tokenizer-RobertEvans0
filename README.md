@@ -33,7 +33,9 @@ aspects of programmer maturity valued by industry.
        - use of capitalization and whitespace (e.g. `char *word_end(char *p)` 
          rather than `char* wordEnd (char* p)`)
     - algorithms and data structures
-    - no extraneous files in repository
+    - repository content (all necessary files are included.  No
+      unnecessary files.
+    - repository log messages (we encoruage you to examine ours)
 - Correctness
 - Timely completion
 
