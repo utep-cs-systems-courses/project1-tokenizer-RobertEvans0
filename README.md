@@ -77,7 +77,7 @@ functions declared and described (but not defined) in tokenizer.h:
 
 1.  `int space_char(char c); // true if c is a tab or space, and not zero`
 2.  `int non_space_char(char c); // true if c not a tab or space, and not zero`
-3.  `char *word_start(char *s); // * to first char in first word word`
+3.  `char *word_start(char *s); // * to first char in first word`
 4.  `char *word_end(char *s);   // * to last char in word`
 5.  `int count_words(char *s); // the number of words in s`
 
