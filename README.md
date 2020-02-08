@@ -21,7 +21,7 @@ aspects of programmer maturity valued by industry.
 - Code Hygene: consistent, expressive, and efficient
     - variable, function, and struct names
     - comments
-    - modularization (into fuctions and files) includig header files
+    - modularization (into fuctions and files) including header files
     - storage management (variable scope & lifetime, allocation and
       freeing of dynamically allocated memory)
     - consistent and language-appropriate coding style
