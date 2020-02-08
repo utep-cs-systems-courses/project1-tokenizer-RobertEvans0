@@ -27,7 +27,7 @@ int count_words(char *str);
 
 /* Returns a fresly allocated new zero-terminated string 
    containing <len> chars from <inStr> */
-char *copy_word(char *inStr, short len);
+char *copy_str(char *inStr, short len);
 
 /* Returns a freshly allocated zero-terminated vector of freshly allocated 
    space-separated tokens from zero-terminated str.

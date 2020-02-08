@@ -73,7 +73,7 @@ contents of each file so that you are familiar with the instructions to
 follow.
 
 The second milestone of your project is to define several of the
-functions declared and described (but not defined) in file tokenizer.h:
+functions declared and described (but not defined) in tokenizer.h:
 
 1.  `int space_char(char c); // true if c is a tab or space, and not zero`
 2.  `int non_space_char(char c); // true if c not a tab or space, and not zero`
@@ -91,11 +91,12 @@ in your source code.
 
 ## Dealing with Memory Allocation
 The third milestone of your project will require you to allocate and
-free memory. Going back to the **tokenizer.h** file, you are now going
-to define the following functions:
+free memory.  You must define and test the 
+following functions declared in `tokenizer.h`.
 
-1.  `void print_tokens(char**);`
-2.  `void free_tokens(char**);`
+1.  `char *copy_str(char *inStr, short len);`
+2.  `void print_tokens(char**);`
+3.  `void free_tokens(char**);`
 
 To test your functions, you should hardcode the allocation of an array
 of strings (char\*\*).
@@ -120,11 +121,15 @@ each node containing:
 2.  the string entered by user,
 3.  and, a pointer to the next node.
 
-Inside the **history.h** header file you will find two struct declarations representing this notion. 
+Inside the **history.h** header file you will find two struct
+declarations representing this notion.
 
 Overall, a user should be able to: 
 
 1. view the history of strings entered by the user 
-2. and recall a certain history item by using the command `!3` (i.e. an exclamation directly followed by the sequence number).
+2. and recall a certain history item by using the command 
+   `!3` (i.e. an exclamation directly followed by the sequence number).
 
-You should define each function from the **history.h** header file in a separate history.c file and then incorporate the history with your tokenizer and interface.
+You should define each function from the **history.h** header file in
+a separate history.c file and then incorporate the history with your
+tokenizer and interface.
