@@ -1,5 +1,8 @@
 Lab Project 1: Building a Tokenizer
 ===================================
+A related demo program is in directory "sortArgDemo".  All encouraged
+to thorougly understand it before attempting this project.
+
 All work should be your own work. Please see the [Course Website](https://sites.google.com/site/arch1utep/home#TOC-Academic-Honesty) for full details on the course's policy on academic honesty.
 
 Prototype source code for this project is in a  directory named `src`.
@@ -84,8 +87,8 @@ functions declared and described (but not defined) in tokenizer.h:
 
 1.  `int space_char(char c); // true if c is a tab or space, and not zero`
 2.  `int non_space_char(char c); // true if c not a tab or space, and not zero`
-3.  `char *word_start(char *s); // * to first char in first word`
-4.  `char *word_end(char *s);   // * to last char in word`
+3.  `char *word_start(char *s); // * to first (non-space) char in first word in s`
+4.  `char *word_terminator(char *word);   // * to char after end of word
 5.  `int count_words(char *s); // the number of words in s`
 
 The declarations of these functions in `tokenizer.h` includes a more
