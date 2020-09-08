@@ -15,8 +15,21 @@ the deadline.:
 built.
 - A brief README documenting any non-obvious aspects of your program.  For example, you may want to describe how it works, how to run it, and any bugs or idiosyncracies the user ought to know about.
 
-You will be evaluated based on the following criteria reflecting
-aspects of programmer maturity valued by industry.
+## Learning outcomes
+
+Students who complete this lab will demonstrate ability to
+- Use command-line tools (cp, mv, rm, mkdir, cd, emacs, cc, make, git) in program development under bash
+- Develop and debug C programs that include 
+-- Pointer arithmetic 
+-- Dynamic mem alllocation & free (malloc/calloc/free) 
+-- Multiple source files (and headers with declarations)
+-- A pointer-based data structure (linked list of structs)
+-- You may refer to the [Grading and Course Learning Outcomes webpage](https://sites.google.com/site/arch1utep/course-learning-outcomes) for an in depth explanation of the grading criteria.
+- Design a comprehensible small program in the C language. 
+
+# Grading 
+
+At a technical inteview where your project will be examined and discussed, your mastery of the following will be assessed 
 
 - Proper use of development tools (e.g. bash, emacs, make, compiler,
   and git) 
@@ -37,8 +50,6 @@ aspects of programmer maturity valued by industry.
     - repository log messages (we encourage you to examine ours)
 - Correctness
 - Timely completion
-
-You may refer to the [Grading and Course Learning Outcomes webpage](https://sites.google.com/site/arch1utep/course-learning-outcomes) for an in depth explanation of the grading criteria.
 
 ## Overview
 Your objective for the first lab project is to build a tokenizer that
