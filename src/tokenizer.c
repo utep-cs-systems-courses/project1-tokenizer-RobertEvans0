@@ -20,8 +20,9 @@ int non_space_char(char c)
 
 char *word_start(char *word)
 {
-    while (*word) ){
-        if (non_space_char(word)) return str;//takes pointer to char at beginning of the word
+
+    while (*word){
+        if (non_space_char(*word)) return word;//takes pointer to char at beginning of the word
         word++;
     }
     return word;
@@ -30,7 +31,7 @@ char *word_start(char *word)
 char *word_terminator(char *word)
 {
     while (*word){
-         if (space_char(word)) return word;//takes pointer to the space after the last char in word
+         if (space_char(*word)) return word;//takes pointer to the space after the last char in word
          word++;
     }
     return word;
@@ -40,17 +41,17 @@ int count_words(char *str)
 {
     int count = 0;
     char *pos = word_start(str);//pointer is on the first char in the first word
-    while (*p){
+    while (*pos){
         count++;
-        pos=word_terminator(p);//pointer will go to first char in each word then the space behind the word til the end.
-        pos=word_start(p);
+        pos=word_terminator(pos);//pointer will go to first char in each word then the space behind the word til the end.
+        pos=word_start(pos);
     }
     return count;
 }
 
 char *copy_str(char *inStr, short len)
 {
-    char *copyStr = malloc((len+1) * sizeof(char);// allocating memory with +1 for '\0' that the end.
+    char *copyStr = malloc((len+1) * sizeof(char));// allocating memory with +1 for '\0' that the end.
     int i = 0;
     for (   ; i < len; i++){
         copyStr[i] = inStr[i];
