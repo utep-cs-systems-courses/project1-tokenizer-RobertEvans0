@@ -5,7 +5,7 @@
 
 int space_char(char c)
 {
-    if (c==' '||c=='\t'){//checks if space or tab
+    if (c==' '||c=='\t'||c=='\0'){//checks if space or tab
         return 1;   
     }
     else {
@@ -20,9 +20,11 @@ int non_space_char(char c)
 
 char *word_start(char *word)
 {
-
+    
     while (*word){
-        if (non_space_char(*word)) return word;//takes pointer to char at beginning of the word
+        if (non_space_char(*word)){
+            return word;//takes pointer to char at beginning of the word
+        }
         word++;
     }
     return word;
@@ -31,7 +33,9 @@ char *word_start(char *word)
 char *word_terminator(char *word)
 {
     while (*word){
-         if (space_char(*word)) return word;//takes pointer to the space after the last char in word
+         if (space_char(*word)){
+             return word;//takes pointer to the space after the last char in word
+         }
          word++;
     }
     return word;
@@ -49,40 +53,66 @@ int count_words(char *str)
     return count;
 }
 
+
+
 char *copy_str(char *inStr, short len)
 {
-    char *copyStr = malloc((len+1) * sizeof(char));// allocating memory with +1 for '\0' that the end.
-    int i = 0;
-    for (   ; i < len; i++){
+    char *copyStr = malloc(( len + 1) * sizeof(char));// allocating memory with +1 for '\0' that the end.
+    int i;
+    for (i=0; i < len; i++){
         copyStr[i] = inStr[i];
     }
-    copyStr[len] = '\0';
+    copyStr[i] = '\0';
     return copyStr;
 }
 
 char **tokenize(char *str)
 {
+    int size = count_words(str);
+    char **tokens = malloc((size + 1) * sizeof(char *));
+    int i;
+    int length;
+    char *p = str;
+    for (i=0;i<size;i++){
     
+        p = word_start(p);
+        length = word_length(p);
+        tokens[i] = copy_str(p, length);
+        p = word_terminator(p)-1;
+    }
+    tokens[size] = '\0';
+    return tokens;
 }
 
 void print_tokens(char **tokens)
 {
+    int i;
     
+   /* for(i = 0; tokens[i] !=0; i++){
+        printf("tokens[%d] = %s\n",i,tokens[i]);
+    }*/
 }
+
 void free_tokens(char **tokens)
 {
-    
+    int i;
+  
+    /*for(i = 0; tokens[i] !=0; i++){
+        free(tokens[i]);
+    }*/
+    free(tokens);
 }
 
 int menuOpt(char *str)
 {
-    if (str[0]=='s'||str[0]=='S'){
+    
+    if ((str[0]=='s'||str[0]=='S')&& !(str[1])){
         return 1;
     }
     else if (str[0]=='!'){
         return 2;
     }
-    else if (str[0]=='q'||str[0]=='Q'){
+    else if ((str[0]=='q'||str[0]=='Q') && !(str[1])){
         return 3;
     }
     else{
@@ -91,32 +121,48 @@ int menuOpt(char *str)
     
 }
 
+int word_length(char *str)
+{
+    int length=0;
+    while(*str){
+        if (non_space_char(*str)){
+            length++;
+            str++;
+        } 
+        //free(str);
+        return length;
+       
+    }
+}
+
 int main()
 {   printf("Hello! Please enter one of the following characters:\n");
     int i;
-    int numHistory;
+    int numHistory=-1;
     char str[100];
     while(1){
         printf("1. Enter 's' to type and record your sentence\n2. Enter '!' followed by a number to display a certain sentence from history\n3. Enter '!h' to display all recorded sentences\n ");
         printf("$");
         fgets(str,100,stdin);
         i = menuOpt(str);
-        switch(i)
+        switch(i)//i
         {
             case 1: printf("Please enter your sentence:\n");
-                    fgets( str, 100, stdin);
-                    //tokenize
-                    //print_tokens
-                    //free_tokens
+                    fgets(str, 100, stdin);
+                    char **tokens = tokenize(str);
+                    print_tokens(tokens);
+                    free_tokens(tokens);
                     break;
                     
             case 2: if (str[1]=='\0'){
                         printf("Please enter a number to display sentence from history or enter 'h' to display all recorded sentences:\n");
                         fgets(str, 100, stdin);
-                        if (str[0]=='h'||str[0]=='H'){
+                        if ((str[0]=='h'||str[0]=='H')&& !(str[1])){
                             //print_history();
                             break;
                         }
+                        else if(){}
+                        
                         //printf(get_history(history,atoi(str)));
                         break;
                     }
@@ -136,7 +182,5 @@ int main()
             default:    printf("Sorry, that was not a valid option please try again.\n");
                     break;
         }
-        
-        
     }
 }
