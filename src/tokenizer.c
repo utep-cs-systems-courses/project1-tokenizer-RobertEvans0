@@ -112,7 +112,7 @@ int menuOpt(char *str)
     else if (str[0]=='!'){
         return 2;
     }
-    else if ((str[0]=='q'||str[0]=='Q') && !(str[1])){
+    else if ((str[0]=='q'||str[0]=='Q') && (str[1]=='\0')){
         return 3;
     }
     else{
@@ -154,14 +154,14 @@ int main()
                     free_tokens(tokens);
                     break;
                     
-            case 2: if (str[1]=='\0'){
+            case 2: if (str[1]=='0'){
                         printf("Please enter a number to display sentence from history or enter 'h' to display all recorded sentences:\n");
                         fgets(str, 100, stdin);
                         if ((str[0]=='h'||str[0]=='H')&& !(str[1])){
                             //print_history();
                             break;
                         }
-                        else if(){}
+                        
                         
                         //printf(get_history(history,atoi(str)));
                         break;
