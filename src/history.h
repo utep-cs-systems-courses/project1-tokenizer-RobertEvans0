@@ -3,7 +3,7 @@
 
 typedef struct s_Item {
   int id;
-  char *str;
+  char *word;
   struct s_Item *next;
 } Item;
 

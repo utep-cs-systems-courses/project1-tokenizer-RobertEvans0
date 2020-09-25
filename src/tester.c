@@ -21,12 +21,12 @@ int tests_run;
 
 /* Tokenizer test cases */
 static char *test_string_length() {
-    mu_assert("string_length('happy') == 5", string_length("happy") == 5);
+    mu_assert("string_length('happy') == 5", word_length("happy") == 5);
     return 0;
 }
 static char *test_is_valid_character() {
-    mu_assert("is_valid_character(' ') == 0", is_valid_character(' ') == 0);
-    mu_assert("is_valid_character('h') == 1", is_valid_character('h') == 1);
+    mu_assert("is_valid_character(' ') == 0", non_space_char(' ') == 0);
+    mu_assert("is_valid_character('h') == 1", non_space_char('h') == 1);
     return 0;
 }
 
