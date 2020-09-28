@@ -1,12 +1,19 @@
 Project 1: Tokenizer
 ====================
-# Instructions:
+# Overview
+ 
+This project builds a tokenizer that can maintain a history of sentences. The tokenizer class contains the main and classes needed to create a tokenizer. The history class contains classes to store sentences entered by the user using a linked list.
+  
+# Compile, run, and clean
 
-You should document your tokenizer in this file.
+ - to compile type and enter **”make”**.
+ - to run type and enter **”make run”**.
+ - once finished with the program type and enter **”make clean”** to erase .o files and executable files.
 
-This file is written in the refreshingly simple `markdown` text
-formatting language.
+# Instructions 
+These are the options available in the program for the user to enter:
 
-To learn about text formatting using markdown, we encourage you to examine 
- - [../README.md](../README.md)
- - the online [Markdown Guide](https://www.markdownguide.org/).
+ - **‘s’**: Allows user to enter and save  a sentence in history.
+ - **’!#’**  (‘!’ followed by a number): Will display a certain sentence in history.
+ - **‘!h’**: Will display all sentences stored in history.
+ - **‘q’**: Will exit program.
